@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movietracker.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="newInstanceItem" mnemonicParsing="false" onAction="#handleCreateNewInstance" text="Create new Movie Instance" />
+                  <MenuItem fx:id="openFileItem" mnemonicParsing="false" onAction="#handleOpenFile" text="Open csv file" />
+                  <MenuItem fx:id="saveFileItem" mnemonicParsing="false" onAction="#handleSaveFile" text="Save as csv file" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutItem" mnemonicParsing="false" onAction="#handleAbout" text="About" />
+              <MenuItem fx:id="getHelpItem" mnemonicParsing="false" onAction="#handleGetHelp" text="Get Help" />
+              <MenuItem fx:id="appearanceItem" mnemonicParsing="false" onAction="#handleAppearance" text="Appearance" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TreeTableView fx:id="movieTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TreeTableColumn fx:id="titleColumn" prefWidth="138.0" text="Title" />
+          <TreeTableColumn fx:id="directorColumn" prefWidth="83.99996948242188" text="Director" />
+          <TreeTableColumn fx:id="dateWatchedColumn" prefWidth="92.66668701171875" text="Date Watched" />
+          <TreeTableColumn fx:id="genreColumn" minWidth="0.0" prefWidth="127.33331298828125" text="Genre" />
+          <TreeTableColumn fx:id="releaseYearColumn" prefWidth="108.66668701171875" text="Release Year" />
+          <TreeTableColumn fx:id="ratingColumn" minWidth="0.0" prefWidth="50.0" text="Rating" />
+        </columns>
+      </TreeTableView>
+   </center>
+</BorderPane>
