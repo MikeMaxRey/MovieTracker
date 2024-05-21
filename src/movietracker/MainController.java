@@ -14,6 +14,13 @@ import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.io.*;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainController {
@@ -35,7 +42,7 @@ public class MainController {
 
     private ObservableList<Movie> movieData = FXCollections.observableArrayList();
     private Stage primaryStage;
-
+    private File currentFile; // Reference to the currently opened file
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
@@ -96,18 +103,26 @@ public class MainController {
 
     @FXML
     private void handleSaveFile() {
+    	if (currentFile != null) {
+    		saveMovieDataToFile(currentFile); //check if there is a currently openend file 
+    	} else {
+    		
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
         File file = fileChooser.showSaveDialog(primaryStage);
         if (file != null) {
+        	currentFile = file; //Update current file reference 
             saveMovieDataToFile(file);
+        }
         }
     }
 
     private void loadMovieDataFromFile(File file) {
+    	currentFile = file; //Store the file reference 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             movieData.clear();
+            movieTable.getRoot().getChildren().clear(); // clear current items 
             while ((line = reader.readLine()) != null) {
                 String[] data = line.split(",");
                 if (data.length == 6) {
