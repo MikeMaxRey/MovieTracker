@@ -9,15 +9,9 @@ A simple Java Application to track watched movies and to practice basic Java Pro
 ## Contributing 
 1. Fork the repository
 2. Create a new branch:
-   '''bash
    git checkout -b [name of your branch]
-   '''
 3. Make your changes:
 4. Commit your changes: 
-'''bash
 git commit -m "Preferred Message"
-
-'''
 5. Push 
-'''bash
 git push origin [name of your branch]
