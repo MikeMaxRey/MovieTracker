@@ -8,5 +8,6 @@
       fx:controller="movietracker.AboutWindowController">
     <Label text="Movie Tracker Application" />
     <Label text="This Java Program is ideal for beginners to practice OOP principles and to track your favorite movies." />
+    <Label text="Ratings can be given between 1.0 and 10.0" />
     <Hyperlink text="Source Code" onAction="#openGitHubPage" />
 </VBox>
