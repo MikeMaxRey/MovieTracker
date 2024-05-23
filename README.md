@@ -6,12 +6,8 @@ A simple Java Application to track watched movies and to practice basic Java Pro
 - Delete movie entries
 - Save and Load new table from a CSV file
 
-## Contributing 
-1. Fork the repository
-2. Create a new branch:
-   git checkout -b [name of your branch]
-3. Make your changes:
-4. Commit your changes: 
-git commit -m "Preferred Message"
-5. Push 
-git push origin [name of your branch]
+## TO DO 
+[]  have possibility to add .png file on the movie instance 
+[] for ‘New Movie Instance’ create another field to add Text Notes (dont make it mandatory to add notes) 
+[] add another window, so when user clicks on instance in table on main window, ‘New instance’ Window opens 
+[] make it possible to choose between dark and light mode in ‘appearance’ 
