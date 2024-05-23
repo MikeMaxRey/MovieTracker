@@ -10,4 +10,5 @@ A simple Java Application to track watched movies and to practice basic Java Pro
 - [ ]  have possibility to add .png file on the movie instance 
 - [ ] for ‘New Movie Instance’ create another field to add Text Notes (dont make it mandatory to add notes) 
 - [ ] add another window, so when user clicks on instance in table on main window, ‘New instance’ Window opens 
-- [ ] make it possible to choose between dark and light mode in ‘appearance’ 
+- [ ] make it possible to choose between dark and light mode in ‘appearance’
+- [ ] Make a full installable (out the box) Programm out of it
