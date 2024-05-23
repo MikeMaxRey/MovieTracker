@@ -3,6 +3,9 @@ package movietracker;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Movie {
     private SimpleStringProperty title;
@@ -68,4 +71,13 @@ public class Movie {
     public void setRating(double rating) {
         this.rating.set(rating);
     }
+    
+    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yy");
+
+    // Format date string to desired format
+    public String formatDate(String dateString) {
+        LocalDate date = LocalDate.parse(dateString); // Parse string to LocalDate
+        return dateFormatter.format(date); // Format LocalDate to desired format
+    }
+    
 }

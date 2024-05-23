@@ -1,5 +1,6 @@
 package movietracker;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -39,14 +40,38 @@ public class NewMovieDialogController {
     public boolean isSaveClicked() {
         return saveClicked;
     }
+    
+    private ObservableList<Movie> movieData;
+
+    public void setMovieData(ObservableList<Movie> movieData) {
+        this.movieData = movieData;
+    }
+
+    
+    
 
     @FXML
     private void handleSave() {
         if (isInputValid()) {
+            if (movie == null) {
+                movie = new Movie(getTitle(), getDirector(), getDateWatched().toString(), getGenre(), getReleaseYear(), getRating());
+                if (movieData != null) {
+                    movieData.add(movie);  // Add the new movie to the movieData list
+                }
+            } else {
+                movie.setTitle(getTitle());
+                movie.setDirector(getDirector());
+                movie.setDateWatched(getDateWatched().toString());
+                movie.setGenre(getGenre());
+                movie.setReleaseYear(getReleaseYear());
+                movie.setRating(getRating());
+            }
             saveClicked = true;
             dialogStage.close();
         }
     }
+
+
 
     @FXML
     private void handleCancel() {
@@ -114,7 +139,21 @@ public class NewMovieDialogController {
             return false;
         }
     }
+    
+    private Movie movie;
 
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+
+        if (movie != null) {
+            titleField.setText(movie.getTitle());
+            directorField.setText(movie.getDirector());
+            dateWatchedField.setText(movie.getDateWatched());
+            genreField.setText(movie.getGenre());
+            releaseYearField.setText(String.valueOf(movie.getReleaseYear()));
+            ratingField.setText(String.valueOf(movie.getRating()));
+        }
+    }
     public String getTitle() {
         return titleField.getText();
     }

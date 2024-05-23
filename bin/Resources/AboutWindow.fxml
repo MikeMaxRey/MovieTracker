@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Hyperlink?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="movietracker.AboutWindowController">
+    <Label text="Movie Tracker Application" />
+    <Label text="This Java Program is ideal for beginners to practice OOP principles and to track your favorite movies." />
+    <Hyperlink text="Source Code" onAction="#openGitHubPage" />
+</VBox>
