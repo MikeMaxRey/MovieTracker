@@ -1,3 +1,4 @@
+/* Controller in MVC: Controls the main window's UI components and manages movie data.*/
 package movietracker;
 
 import javafx.beans.property.SimpleObjectProperty;

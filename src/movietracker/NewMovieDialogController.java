@@ -1,3 +1,4 @@
+// Controller in MVC: Handles user input for adding or editing movie instances in the dialog window.
 package movietracker;
 
 import javafx.collections.ObservableList;

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Java MovieTracker</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			
+	
+	<!-- Slide 0 -->		
+			<section>
+					<h1>MovieTracker</h1>
+					<p>
+						A Java(FX) Desktop Application to track and manage watched movies
+					</p>
+				</section>
+	<!-- Slide 1 -->			
+				<section>
+				<h2> Goals of Project</h2>
+			
+				    <ul style="list-style-type: disc; padding-left: 20px;">
+        <li style="text-decoration: none;">Practice learned content from Lessons</li>
+        <li style="text-decoration: none;">Understand and Review Program from the 5 main Perspectives</li>
+        <li style="text-decoration: none;">Practice Git Workflow</li>
+		<li style="text-decoration: none;">Create Program I would actually use to make my life easier</li>
+        <!-- Add more goals as needed -->
+    </ul>
+				</section>
+				
+				
+	<!-- Slide 2 -->			
+			<section>
+				<h2> Overview of Application</h2>
+			
+				    <ul style="list-style-type: disc; padding-left: 20px;">
+        <li style="text-decoration: none;">Data Mgmt App / CRUD Program</li>
+        <li style="text-decoration: none;">When watching huge amount of Movies its hard to keep track and keep the memories fresh</li>
+        <li style="text-decoration: none;">This Program tries to adress this problem by creating a simple way to store watched movies in a CSV file</li>
+     
+    </ul>
+				</section>
+				
+	<!-- Slide 3 -->			
+		<section>
+			<h2> Architecture and Design</h2>
+			<ul style="list-style-type: disc; padding-left: 20px;"> 
+			<li style="text-decoration: none;">Follows MVC Structure</li>
+			<li style="text-decoration: none;">Model: Representing Movie Data(main.java and movie.java)</li>
+			<li style="text-decoration: none;">View: Creates UI and handles User Interaction(all fxml files)</li>
+			<li style="text-decoration: none;">Controller: Handles user input(View) and updates Model accordingly(all controller classes)</li>
+			</ul>
+		</section>
+	<!-- Slide 4 -->	
+			<section>
+			<h2>Demo</h2>
+			Lets try it! 
+		</section>
+		<!-- Slide 5 -->
+		<section>
+		<h2>Complexity</h2>
+		<ul style="list-style-type: disc; padding-left: 20px;"> 
+			<li style="text-decoration: none;">Moderate Complexity</li>
+			<li style="text-decoration: none;">Multiple Classes involved including controllers, models and UI components</li>
+			</ul>
+		</section>
+		<!-- Slide 6 -->
+		<section>
+		<h2>Interactions</h2>
+		<ul style="list-style-type: disc; padding-left: 20px;"> 
+			<li style="text-decoration: none;">Controller classes interact through method calls and event handling</li>
+			<li style="text-decoration: none;">Dependencies exist between classes for handling user input, displaying data in the UI, and managing movie data</li>
+			<li style="text-decoration: none;">User interactions, such as clicking buttons to create or edit movies</li>
+			<li style="text-decoration: none;">The Goal is to drive the flow of control within the application</li>
+			</ul>
+		</section>
+		<!-- Slide 7 -->
+		<section>
+		<h2>Data Structures</h2>
+		<ul style="list-style-type: disc; padding-left: 20px;"> 
+			<li style="text-decoration: none;"> TreeTableView for displaying movie data</li>
+			<li style="text-decoration: none;">ArrayLists to store movie data in memory</li>
+			<li style="text-decoration: none;">Room for improvement?</li>
+			</ul>
+		</section>
+			<!-- Slide 8 -->
+		<section>
+		<h2>Quality</h2>
+		<ul style="list-style-type: disc; padding-left: 20px;"> 
+			<li style="text-decoration: none;">Program has clear naming conventions and organized structure</li>
+			<li style="text-decoration: none;">Code duplication could be reduced, especially in handling user input validation</li>
+			</ul>
+		</section>
+				<!-- Slide 9 -->
+		<section>
+		<h2>Algorithms</h2>
+		<ul style="list-style-type: disc; padding-left: 20px;"> 
+			<li style="text-decoration: none;">Parsing CSV files</li>
+			<li style="text-decoration: none;">Validating user input</li>
+			</ul>
+		</section>
+			<!-- Slide 10 -->
+		<section>
+		<h2>Future Enhancements</h2>
+		<ul style="list-style-type: disc; padding-left: 20px;"> 
+			<li style="text-decoration: none;">Have possibility to add .png file on the movie instance</li>
+			<li style="text-decoration: none;">For ‘New Movie Instance’ create another field to add Text Notes (dont make it mandatory to add notes)</li>
+			<li style="text-decoration: none;">Add another window, so when user clicks on instance in table on main window, ‘New instance’ Window opens</li>
+			<li style="text-decoration: none;">Make it possible to choose between dark and light mode in ‘appearance’</li>
+			<li style="text-decoration: none;">Enhance deployment! Make installable</li>
+			</ul>
+		</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
