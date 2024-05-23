@@ -1,3 +1,4 @@
+// Model in MVC: Attributes such as title, director, date watched, genre, release year, and rating represent the data or properties of a movie entity
 package movietracker;
 
 import javafx.beans.property.SimpleDoubleProperty;

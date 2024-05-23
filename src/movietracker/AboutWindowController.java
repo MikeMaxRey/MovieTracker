@@ -1,3 +1,4 @@
+// Controller in MVC
 package movietracker;
 
 import javafx.event.ActionEvent;

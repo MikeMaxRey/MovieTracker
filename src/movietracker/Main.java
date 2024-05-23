@@ -1,3 +1,5 @@
+/* Part of Model (MVC): Responsible for representing movie entities with attributes such as:
+title, director, date watched, genre, release year, and rating */
 package movietracker;
 
 import javafx.application.Application;
